@@ -1,0 +1,63 @@
+body {
+    background-color: #666666;
+}
+.container {
+    background-color:#ffffff;
+}
+h1 {
+    font-weight: bold;
+}
+#btnCopy {
+    float: right;
+}
+#textInput {
+    width: 35px;
+}
+section { 
+    background-color: #ffffff;
+    display: flex; 
+    width: 100%; 
+    height: 200px; 
+    margin: auto; 
+    border-radius: 10px; 
+    border: 3px dashed #1c87c9; 
+} 
+p { 
+    margin: auto; /* Important */ 
+    text-align: center; 
+    font-size: 24px;
+    word-break: break-all;
+}
+
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+  
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 140px;
+    background-color: #555;
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 150%;
+    left: 50%;
+    margin-left: -75px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+  
+.tooltip .tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #555 transparent transparent transparent;
+}
