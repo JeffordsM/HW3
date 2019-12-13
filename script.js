@@ -7,23 +7,12 @@ var loCArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 var upCArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
 var numCArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
 var speCArray = ["!", "?", "#", "@", "~", "&", "_", "-",]
-var passRand = []
 // var passFin = passRand.join('');
-
-function clearRandoPass() {
-
-    document.getElementById('passInput').value = '';
-    document.getElementById('passP').value = '';
-
-}
-
-document.getElementById("btnGen").addEventListener("click", clearRandoPass);
 
 
 function makePass() {
-
-
     
+    var passRand = []
 
     var char = document.getElementById("customRange").value;
 
