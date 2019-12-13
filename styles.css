@@ -27,6 +27,13 @@ p {
     text-align: center; 
     font-size: 24px;
     word-break: break-all;
+    padding: 20px;
+}
+
+textarea {
+    position: absolute; 
+    left: -1000px; 
+    top: -1000px
 }
 
 .tooltip {

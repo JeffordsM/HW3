@@ -7,8 +7,23 @@ var loCArray = ["a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m",
 var upCArray = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z",]
 var numCArray = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9",]
 var speCArray = ["!", "?", "#", "@", "~", "&", "_", "-",]
+var passRand = []
+// var passFin = passRand.join('');
+
+function clearRandoPass() {
+
+    document.getElementById('passInput').value = '';
+    document.getElementById('passP').value = '';
+
+}
+
+document.getElementById("btnGen").addEventListener("click", clearRandoPass);
+
 
 function makePass() {
+
+
+    
 
     var char = document.getElementById("customRange").value;
 
@@ -94,7 +109,7 @@ function makePass() {
         alert("You need to check at least one of the boxes!")
     }
 
-    var passRand = [];
+    // var passRand = [];
 
     for (var i = 0; i < char; i++) {
 
@@ -108,25 +123,30 @@ function makePass() {
     console.log("The Random Password is: " + passFin)
 
     function postRandoPass(val) {
+
         document.getElementById('passInput').innerHTML = val;
+        document.getElementById('passP').innerHTML = val;
+
     }
 
     postRandoPass(passFin);
 
-
+    
 }
 
 function copyPass() {
     /* Get the text field */
-    var copyText = passFin
+    var copyText = document.querySelector("#passInput");
+    // console.log(passFin);
+    
+    copyText.select();
 
-    console.log(copyText);
-
-    // copyText.select(innerHTML);
     // copyText.setSelectionRange(0, 99999)
-
+    
+    console.log(copyText);
     document.execCommand("copy");
 
-    var tooltip = document.getElementById("myTooltip");
-    tooltip.innerHTML = "Copied: " + copyText.value;
+    alert("Random Password Copied!")
+
 }
+
